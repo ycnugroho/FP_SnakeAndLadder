@@ -17,7 +17,18 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        SnakeAndLadder g1 = new SnakeAndLadder(100);
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the size of the board you want : ");
+        int boardSize = scanner.nextInt();
+        scanner.nextLine(); // Consume newline character
+
+        SnakeAndLadder g1 = new SnakeAndLadder(boardSize);
         g1.play();
+
+        scanner.close();
+
     }
 }
+
